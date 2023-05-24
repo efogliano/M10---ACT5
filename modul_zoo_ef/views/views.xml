@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+		<record model="ir.ui.view" id="view_zoo_animal_form">
+		<field name="name">zoo_animal</field>
+		<field name="model">zoo.animal</field>
+		<field name="type">form</field>
+		<field name="arch" type="xml">
+			<form>
+				<sheet>
+					<group col="12">
+						<group colspan="6">
+							<field name="continentOrigen"/>
+							<field name="dataNaix"/>
+							<field name="paisOrigen"/>				
+							<field name="sexe"/>
+						</group>
+						<group colspan="6">
+							<field name="zoo_id"/>				
+							<field name="especie_id"/>
+						</group>
+					</group>
+				</sheet>
+			</form>
+		</field>
+	</record>
+
+	<record model="ir.ui.view" id="view_zoo_especie_form">
+		<field name="name">zoo_especie</field>
+		<field name="model">zoo.especie</field>
+		<field name="type">form</field>
+		<field name="arch" type="xml">
+			<form>
+				<sheet>
+						<group col="12">
+							<group colspan="6">
+								<field name="name"/>
+								<field name="familia"/>
+								<field name="nomCientific"/>
+							</group>
+							<group colspan="6">
+								<field name="nomVulgar"/>
+								<field name="perill"/>				
+							</group>
+					</group>
+				</sheet>
+			</form>
+		</field>
+	</record>
+
+	<record model="ir.ui.view" id="view_zoo_zoo_form">
+		<field name="name">zoo_zoo</field>
+		<field name="model">zoo.zoo</field>
+		<field name="type">form</field>
+		<field name="arch" type="xml">
+			<form>
+				<sheet>
+					<group col="12">
+						<group colspan="6">
+							<field name="name"/>
+							<field name="nom"/>
+							<field name="grandaria"/>
+						</group>
+						<group colspan="6">		
+							<field name="ciutat"/>
+							<field name="pais"/>	
+						</group>			
+					</group>
+				</sheet>
+			</form>
+		</field>
+	</record>
+
+		<record model="ir.actions.act_window" id="action_zoo_animal_tree">
+		<field name="name">Animal</field>
+		<field name="res_model">zoo.animal</field>
+		<field name="view_mode">tree,form</field>
+	</record>
+
+	<record model="ir.actions.act_window" id="action_zoo_especie_tree">
+		<field name="name">Especie</field>
+		<field name="res_model">zoo.especie</field>
+		<field name="view_mode">tree,form</field>
+	</record>
+
+	<record model="ir.actions.act_window" id="action_zoo_zoo_tree">
+		<field name="name">Zoo</field>
+		<field name="res_model">zoo.zoo</field>
+		<field name="view_mode">tree,form</field>
+	</record>
+    
+	<menuitem name="Zoo" id="zoo_menu1" />
+	<menuitem name="Animal" parent="zoo_menu1" id="zoo_menu1_1" action="action_zoo_animal_tree" />	
+	<menuitem name="Especie" parent="zoo_menu1" id="zoo_menu1_2" action="action_zoo_especie_tree" />	
+	<menuitem name="Zoo" parent="zoo_menu1" id="zoo_menu1_3" action="action_zoo_zoo_tree" />		
+    
+	<record model="ir.ui.view" id="view_zoo_animal_tree">
+		<field name="name">zoo_animal</field>
+		<field name="model">zoo.animal</field>
+		<field name="type">tree</field>
+		<field name="arch" type="xml">
+			<tree string="Animal">
+				<field name="continentOrigen"/>
+				<field name="dataNaix"/>
+				<field name="paisOrigen"/>				
+                <field name="sexe"/>	
+			</tree>
+		</field>
+	</record>
+
+	<record model="ir.ui.view" id="view_zoo_especie_tree">
+		<field name="name">zoo_especie</field>
+		<field name="model">zoo.especie</field>
+		<field name="type">tree</field>
+		<field name="arch" type="xml">
+			<tree string="Especie">
+				<field name="familia"/>
+				<field name="nomCientific"/>
+                <field name="nomVulgar"/>	
+                <field name="perill"/>					
+			</tree>
+		</field>
+	</record>
+
+	<record model="ir.ui.view" id="view_zoo_zoo_tree">
+		<field name="name">zoo_zoo</field>
+		<field name="model">zoo.zoo</field>
+		<field name="type">tree</field>
+		<field name="arch" type="xml">
+			<tree string="Zoo">
+				<field name="nom"/>
+				<field name="grandaria"/>			
+				<field name="ciutat"/>
+                <field name="pais"/>				
+			</tree>
+		</field>
+	</record>
+
+
+
+	<record model="ir.ui.view" id="view_zoo_animal_tree">
+		<field name="name">zoo_animal</field>
+		<field name="model">zoo.animal</field>
+		<field name="type">tree</field>
+		<field name="arch" type="xml">
+			<tree string="Animal">
+				<field name="continentOrigen"/>
+				<field name="dataNaix"/>
+				<field name="paisOrigen"/>				
+                <field name="sexe"/>	
+			</tree>
+		</field>
+	</record>
+
+	<record model="ir.ui.view" id="view_zoo_especie_tree">
+		<field name="name">zoo_especie</field>
+		<field name="model">zoo.especie</field>
+		<field name="type">tree</field>
+		<field name="arch" type="xml">
+			<tree string="Especie">
+				<field name="familia"/>
+				<field name="nomCientific"/>
+                <field name="nomVulgar"/>	
+                <field name="perill"/>					
+			</tree>
+		</field>
+	</record>
+
+	<record model="ir.ui.view" id="view_zoo_zoo_tree">
+		<field name="name">zoo_zoo</field>
+		<field name="model">zoo.zoo</field>
+		<field name="type">tree</field>
+		<field name="arch" type="xml">
+			<tree string="Zoo">
+				<field name="nom"/>
+				<field name="grandaria"/>			
+				<field name="ciutat"/>
+                <field name="pais"/>				
+			</tree>
+		</field>
+	</record>
+	</data>
+</odoo>

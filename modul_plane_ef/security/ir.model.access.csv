@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_plane_aeroport,access_plane_aeroport,model_plane_aeroport,base.group_user,1,1,1,1
+access_plane_avio,access_plane_avio,model_plane_avio,base.group_user,1,1,1,1
+access_plane_pilot,access_plane_pilot,model_plane_pilot,base.group_user,1,1,1,1
+access_plane_vol,access_plane_vol,model_plane_vol,base.group_user,1,1,1,1
